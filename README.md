@@ -1,103 +1,95 @@
-# 📚 Sistema de Biblioteca em Java
+📚 Sistema de Biblioteca - Segunda Etapa
+📖 Descrição Geral
 
-Projeto desenvolvido para a disciplina de Construção de Dados, com o objetivo de implementar um sistema de biblioteca utilizando estruturas de dados.
+Este projeto tem como objetivo implementar um Sistema de Biblioteca em Java utilizando estruturas de dados para organização do acervo, controle de empréstimos, reservas e gerenciamento de usuários.
 
----
+A segunda etapa do projeto foi focada na implementação das classes responsáveis pelas ações do sistema, persistência de dados e interface com o usuário.
 
-## 🚀 Tecnologias utilizadas
+🛠️ Tecnologias Utilizadas
+Java
+Programação Orientada a Objetos (POO)
+Estruturas de Dados Utilizadas
+Lista (armazenamento de usuários e livros)
+Fila (controle de reservas)
+Pilha (histórico de operações)
+Árvore Binária de Busca (busca eficiente de livros)
+Algoritmos de ordenação
+📂 Estrutura do Projeto
+📌 Pacote br.edu.biblioteca.action
 
-* ☕ Java
-* Estruturas de Dados:
+Responsável pelas ações executadas no sistema.
 
-  * Lista (Vetor)
-  * Fila
-  * Pilha
-  * Árvore Binária de Busca (BST)
+Classes Implementadas
+Acao
+AcaoEmpresta
+AcaoDevolver
+AcaoCadastrarLivro
+AcaoRemoverLivro
+AcaoReservar
+AcaoCancelarReserva
+Métodos da Interface Acao
+executar();
+desfazer();
+descricao();
+📌 Pacote br.edu.biblioteca.repository
 
----
+Responsável pela persistência de dados em arquivos TXT/CSV.
 
-## 📦 Estrutura do Projeto
+Classes Implementadas
+LivroRepository
+UsuarioRepository
+EmprestimoRepository
+ReservaRepository
+ExemplarRepository
+FileStorage
+Funcionalidades
+Salvar informações
+Carregar informações
+Persistência de dados em arquivos
+📌 Pacote br.edu.biblioteca.ui
 
-```
+Responsável pela interface do usuário em modo console.
+
+Classes Implementadas
+MenuPrincipal
+TelaCatalogo
+TelaUsuarios
+TelaEmprestimos
+TelaReservas
+TelaRelatorios
+⚙️ Funcionalidades
+Cadastro de livros
+Cadastro de usuários
+Controle de empréstimos
+Controle de devoluções
+Reserva de livros
+Consulta ao acervo
+Controle de multas
+Relatórios do sistema
+▶️ Execução
+
+Execute a classe principal:
+
+Main.java
+Exemplo de Saída
+=== LIVROS ===
+Java Básico
+
+=== USUÁRIOS ===
+Larissa
+
+Empréstimo realizado!
+
+Multa calculada: R$ 6.0
+📁 Estrutura de Diretórios
 src/
- └── br.edu.biblioteca
-     ├── model
-     ├── structures
-     └── service
-```
-
----
-
-## 📚 Funcionalidades
-
-* Cadastro de livros
-* Cadastro de usuários
-* Controle de empréstimos e devoluções
-* Reservas de livros (fila)
-* Controle de multas
-* Relatórios simples
-* Busca eficiente por ISBN (árvore)
-
----
-
-## 🧱 Estruturas de Dados Implementadas
-
-* Vetor<T> → armazenamento de dados
-* MinhaFila<T> → controle de reservas
-* MinhaPilha<T> → histórico (undo/redo)
-* ArvoreBST<K, V> → busca eficiente
-
----
-
-## 📂 Pacotes
-
-### 🔹 model
-
-Classes principais do sistema:
-
-* Livro
-* Autor
-* Categoria
-* Usuario
-* Emprestimo
-* Reserva
-* Multa
-* Notificacao
-* Exemplar
-
-### 🔹 structures
-
-Implementação das estruturas de dados:
-
-* Vetor
-* MinhaFila
-* MinhaPilha
-* ArvoreBST
-
-### 🔹 service
-
-Regras de negócio:
-
-* CatalogoService
-* UsuarioService
-* EmprestimoService
-* ReservaService
-* RelatorioService
-
----
-
-## 🎯 Objetivo
-
-Aplicar conceitos de estruturas de dados na construção de um sistema real, simulando o funcionamento de uma biblioteca.
-
----
-
-## 👩‍💻 Autora
-
-Larissa Soeiro
-
----
-
-## 💻 Linguagem
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge\&logo=java\&logoColor=white)
+└── br/
+    └── edu/
+        └── biblioteca/
+            ├── action/
+            ├── model/
+            ├── repository/
+            ├── service/
+            ├── structures/
+            ├── ui/
+            └── Main.java
